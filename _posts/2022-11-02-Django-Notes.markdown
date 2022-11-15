@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Django Notes for CS50 Web"
-date:   2022-10-24 14:21:14 +0200
+date:   2022-11-02 14:00:00 +0200
 categories: Django
 ---
 
