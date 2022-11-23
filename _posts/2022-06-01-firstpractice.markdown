@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Lesson 2 Questionnaire"
-date:   2022-06-08 14:00:00 +0200
+title:  "practicing on deep learning"
+date:   2022-06-01 14:00:00 +0200
 categories: Deep Learning
 ---
 
@@ -9,4 +9,4 @@ categories: Deep Learning
 
 https://finns841594.github.io/fengsblog/machine%20learning/2022/06/01/first-complete-practice.html
 
-havn't find a way to migrate a jupyter notebook to markdown file so can be posted here.
+havn't find a way to migrate a jupyter notebook to markdown file so it can be posted here.
