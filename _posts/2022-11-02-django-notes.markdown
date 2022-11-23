@@ -30,7 +30,7 @@ def entries(request, titlefromurl):
     else:
         message = f"'{titlefromurl}' has not been created yet"
         return render(request, "encyclopedia/error.html", {
-            "message": message
+            
         })
 ```
 
