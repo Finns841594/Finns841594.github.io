@@ -11,7 +11,8 @@ Notes when were working with "problem set 1: wiki" for course CS50 Web Programmi
 
 # 1 How to render a string into a markdown format text
 The function is not builtin, need to install it by `pip3 install markdown2`.
-code in views.py:
+code in `views.py`:
+
 ```python
 # Need to install it first.
 import markdown2
