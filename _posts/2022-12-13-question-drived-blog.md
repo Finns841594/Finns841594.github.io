@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Notes: JavaScript"
+title:  "Posts: Question-drived articles"
 date:   2022-12-13 17:00:00 +0200
 categories: blog
 ---
 
-# Question-drived article
+# Question-drived articles
 
 ## 1. Why writting this post?
 
