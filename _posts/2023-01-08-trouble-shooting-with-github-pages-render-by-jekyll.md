@@ -13,3 +13,6 @@ https://github.com/orgs/community/discussions/23170
 
 Basically you need to add `{% raw %}` and `{% endraw %}` at the beginning and ending of the potentially trouble-making code blocks in your .md file.
 
+More problem could happen later, I leave this posts here for future:
+
+https://www.tomordonez.com/curly-braces-markdown-jekyll/
