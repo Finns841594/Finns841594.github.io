@@ -173,7 +173,7 @@ export function sayHi(user) {
 
 ### 1 template.html and index.html
 But its always good to inherete structure from a template.html, which written in this way:
-[//]: # ({% raw %})
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -190,10 +190,10 @@ But its always good to inherete structure from a template.html, which written in
 </body>
 </html>
 ```
-[//]: # ({% endraw %})
+{% endraw %}
 
 other html files can just inherite it by:
-[//]: # ({% raw %})
+{% raw %}
 ```html
 {% extends "template.html" %}
 
@@ -212,7 +212,7 @@ other html files can just inherite it by:
 {% endfor %}
 {% endblock %}
 ```
-[//]: # ({% endraw %})
+{% endraw %}
 
 Above are from [here](https://docs.djangoproject.com/en/4.1/ref/templates/language/)
 
