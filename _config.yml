@@ -28,9 +28,12 @@ twitter_username: N/A
 github_username:  finns841594
 
 # Build settings
-theme: minima
+# Feng #ed the original local theme and install a remote theme
+#theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
