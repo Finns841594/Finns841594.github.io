@@ -15,9 +15,6 @@ gem "minima", "~> 2.5"
 gem "github-pages", "~> 227", group: :jekyll_plugins
 # If you have any plugins, put them here!
 
-# Below is the gem Feng added for theme Minimal Mistakes
-gem "jekyll-include-cache", group: :jekyll_plugins
-
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
 end
