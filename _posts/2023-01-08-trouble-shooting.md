@@ -11,7 +11,7 @@ If any markdown post has {% raw %}{{example}}{% endraw %} inside, jekyll will ha
 I found the solution here:
 https://github.com/orgs/community/discussions/23170
 
-Basically you need to add {% raw %}`{% raw %}` and `{% endraw %}`{% raw %} at the beginning and ending of the potentially trouble-making code blocks in your .md file.
+Basically you need to add `{% raw %}` and `{% endraw %}` at the beginning and ending of the potentially trouble-making code blocks in your .md file.
 
 More problem could happen later, I leave this posts here for future:
 
