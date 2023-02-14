@@ -14,3 +14,55 @@ categories: Note Salt
 ## 2 Build a simper server
 
 ## 3 Set an api
+
+# Tuesday: REST
+
+## 0 Exercise: REST API
+
+## 1 About Import and Export
+
+Use `import express from 'express';` as default method for importing.
+
+## 2 Different ways of manipulating local files
+
+By using `fs` module:
+
+1. read file list in a folder:
+```js
+fs.readdirSync('src/samplefolder')
+```
+2. read single file:
+```js
+fs.readFileSync('src/samplefolder', 'utf-8')
+```
+3. write a file:
+```js
+fs.writeFileSync('src/samplefolder/samplefile.md', 'sample contents')
+```
+4. append a file:
+```js
+fs.appendFileSync('src/samplefolder/samplefile.md', 'sample contents')
+```
+
+## 3 String to JSON and JSON to string
+
+```js
+// From a string to a Json
+const aJson = JSON.parse(aJsonFormatString)
+// From a Json to a string
+const aJsonFormatString = JSON.stringify(aJson)
+```
+
+## 4 Generate uuid in JS
+
+Check [here](https://www.npmjs.com/package/uuid)
+
+1. Install
+`npm install uuid`
+
+2. Create a UUID (ES6 module syntax)
+```js
+import { v4 as uuidv4 } from 'uuid';
+uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+```
+
