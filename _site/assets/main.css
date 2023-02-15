@@ -125,11 +125,12 @@ table td { border: 1px solid #e8e8e8; }
 @media screen and (max-width: 800px) { .post-title { font-size: 36px; } }
 
 .post-content { margin-bottom: 30px; }
-.post-content h2 { font-size: 32px; }
+/** lines below is modified by Feng: changed 32px, 26px, 20px to 28px, 22px, 18px **/
+.post-content h2 { font-size: 28px; }
 @media screen and (max-width: 800px) { .post-content h2 { font-size: 28px; } }
-.post-content h3 { font-size: 26px; }
+.post-content h3 { font-size: 22px; }
 @media screen and (max-width: 800px) { .post-content h3 { font-size: 22px; } }
-.post-content h4 { font-size: 20px; }
+.post-content h4 { font-size: 18px; }
 @media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
 
 /** Syntax highlighting styles */
