@@ -5,7 +5,7 @@ date: 2023-02-15 22:32:00 +0200
 ---
 
 [here](https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/solutions/typescript)
-Found this amazing solution from codewars.com:
+### Found this amazing solution from codewars.com:
 ```js
 export function duplicateEncode(word: string){
     // ...
@@ -48,4 +48,14 @@ its cool to check if repeatition exits in an array by .map
 exampleArray.map((currentItem, currentItemIndex, fullArray) => {
       return fullArray.indexOf(currentItem) == fullArray.lastIndexOf(currentItem) ? true : false
     })
+```
+
+### another clear solution
+filter can be powerful when combine with array function and ternary operator
+```js
+export function duplicateEncode(word: string) {
+  const chars = word.toLowerCase().split("");
+
+  return chars.map(char => chars.filter(c => c === char).length > 1 ? ")" : "(").join("");
+}
 ```
