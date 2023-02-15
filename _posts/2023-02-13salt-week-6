@@ -66,3 +66,37 @@ import { v4 as uuidv4 } from 'uuid';
 uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 ```
 
+# Wednesday: Full Stack Development
+
+## 1 Front End Server
+
+Use [vite](https://vitejs.dev) to serve the frontend code, most of them are static. Vite uses `gh-pages`.
+
+## 2 Back End Server
+
+[railway.app](https://railway.app/) to serve as a backend server. It can import code from github repo.
+
+## 3 db.js serve as database
+
+In `db.js`:
+```js
+let dataSetOne = [
+  {"id": 123456789,
+  "name": "example"}
+];
+let dataSetTwo = [];
+
+module.exports = {dataSetOne, dataSetTwo}
+```
+
+In `example1.js`:
+```js
+const { dataSetOne, dataSetTwo } = require('./db.js');
+```
+
+In `example2.js`:
+```js
+const { dataSetOne } = require('./db.js');
+```
+
+if one change the `dataSetOne` in `example2.js`, the `dataSetOne` in `example1.js` will be changed as well.
