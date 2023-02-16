@@ -100,3 +100,51 @@ const { dataSetOne } = require('./db.js');
 ```
 
 if one change the `dataSetOne` in `example2.js`, the `dataSetOne` in `example1.js` will be changed as well.
+
+# Thursday: Graphql
+
+The [offical website](https://graphql.org) have very clear illustration about why using it and how it works.
+
+## Backend code
+
+1. `Query` is an object, with each key is a name of query route, each respective value is a callback function that returns the value.
+
+2. All queries imported as `root` and set as value of `resolvers` like below:
+```ts
+const comboSchema = makeExecutableSchema({
+  typeDefs: schema,
+  resolvers: root,
+});
+```
+BTW, the schema is the structure for quering, for example:
+```ts 
+const schema = `
+type Query {
+  instructor(instrName:String): Instructor,
+}
+
+type Instructor {
+  id: ID!
+  name: String!
+  favoriteTypeOfFood: String!
+  addressId: ID!
+  address: Address
+}
+`;
+```
+and then set as an router in express structure:
+```ts
+const app = express();
+app.use(
+  '/graphql',
+  graphqlHTTP({
+    schema: comboSchema,
+    context: db,
+    graphiql: true,
+  }),
+);
+app.listen(4000);
+```
+The db above is a data base to look for the data.
+
+## Frontend request by express-graphql
