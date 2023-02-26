@@ -18,3 +18,5 @@ git remote set-url origin git@github.com:Finns841594/weekendtest-shoppingWishLis
 ```
 
 ### 3. add commit and push, done
+
+reference [link](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories)
