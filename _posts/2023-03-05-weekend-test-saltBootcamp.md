@@ -19,9 +19,57 @@ Eventually in the `<form>` element, you add `onSubmit={submitHandleFunction}` to
 
 ## 3. How to send data to parent component?
 
+By callback function! Send a callback function to child component.
+
 ## 4. Example of using `axios` to send a post request
 
+```ts
+const newDeveloper = {a:1,b:'yes'}
+try {
+      const postResponse = await axios.post('http://localhost:3001/developers', newDeveloper)
+      console.log(postResponse.data)
+    } catch (error) {
+      console.log(error)
+    }
+```
+
 ## 5. Example of using `fetch` in `.tsx` code
+
+The fetching triggered by both the changing of state `updateData` in this component and `updateDataIn` from parent component.
+
+```ts
+
+// Define the fetching function from outside first
+const fetchingDevs = async (url: string) => {
+  const result = await fetch('http://localhost:3001/'+ url).then(response => response.json())
+  return result
+}
+
+
+const RenderBootCamp = ( {bootcampDisplay, updateDataIn} : RenderBootCampProps) => {
+  const [data, setData] = useState<Developer[] | null>(null);
+  const [updateData, setUpdateData] = useState<number>(0)
+
+  const updateDataFunction = () => {
+    setUpdateData(updateData + 1)
+  }
+
+  useEffect(() => {
+    fetchingDevs('developers').then(result => setData(result.developers))
+   },[]);
+
+  useEffect(() => {
+    fetchingDevs('developers').then(result => setData(result.developers))
+   },[updateData, updateDataIn]); 
+
+  // pass the data to child component for rendering
+  return (
+      <div className="gallery">
+        <RenderDevelopers bootcampName={bootcampDisplay} developers={data} bootcamps={bootcamps} instructors={instructors} update={updateDataFunction}/>
+      </div>
+  )
+}
+```
 
 ## 6. All kinds of `event`
 
