@@ -17,11 +17,13 @@ Eventually in the `<form>` element, you add `onSubmit={submitHandleFunction}` to
 
 ## 2. How to send data to child component?
 
+Pass them as props.
+
 ## 3. How to send data to parent component?
 
 By callback function! Send a callback function to child component.
 
-## 4. Example of using `axios` to send a post request
+## 4. Example of using Axios to send a post request
 
 ```ts
 const newDeveloper = {a:1,b:'yes'}
@@ -33,7 +35,7 @@ try {
     }
 ```
 
-## 5. Example of using `fetch` in `.tsx` code
+## 5. Example of using fetch in .tsx code
 
 The fetching triggered by both the changing of state `updateData` in this component and `updateDataIn` from parent component.
 
@@ -71,7 +73,7 @@ const RenderBootCamp = ( {bootcampDisplay, updateDataIn} : RenderBootCampProps) 
 }
 ```
 
-## 6. All kinds of `event`
+## 6. All kinds of Events
 
 ### 1. ChangeEvent
 
