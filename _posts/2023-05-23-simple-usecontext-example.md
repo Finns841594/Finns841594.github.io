@@ -68,6 +68,7 @@ export default function Home() {
 
 ```typescript
 import { useContext } from 'react'
+import { PostsContext } from '../PostsContext'
 
   ...
   const { posts } = useContext(PostsContext)
