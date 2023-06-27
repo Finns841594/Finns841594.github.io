@@ -40,6 +40,24 @@ console.log(yesterday.toDateString());
 // OUTPUT: Fri Jun 12 2023
 ```
 
+##### One can also pass in time to the `Date` constructor.
+
+1. by string
+```js
+const tomorrow = new Date('2023-06-14T00:00:00');
+console.log(tomorrow.toDateString());
+// OUTPUT: Wed Jun 14 2023
+```
+2. by milliseconds number
+```js
+const aDay = new Date(1666342680472);
+console.log(aDay);
+// OUTPUT: 2022-10-21T08:58:00.472Z
+```
+Note: this number is the milliseconds since 1970-01-01 00:00:00 UTC.
+Its called Unix Epoch.
+
+
 #### Date calculation
 
 ```js
@@ -49,3 +67,26 @@ tomorrow.setDate(today.getDate() + 1);
 console.log(tomorrow.toDateString());
 // OUTPUT: Wed Jun 14 2023
 ```
+
+#### Date and Time comparison
+
+##### Compare two dates
+
+```js
+const today = new Date();
+const tomorrow = new Date(today);
+tomorrow.setDate(today.getDate() + 1);
+console.log(today < tomorrow);
+// OUTPUT: true
+```
+
+##### Compare two times
+
+```js
+const today = new Date();
+const aDay = new Date(1666342680472);
+aDay.setDate(today.getDate() + 1);
+console.log(today.getTime() < aDay.getTime());
+// OUTPUT: flase
+```
+
