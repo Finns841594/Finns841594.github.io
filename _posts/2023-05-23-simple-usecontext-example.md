@@ -52,7 +52,7 @@ export default function Home() {
   
   return (
     // Wrap the context HERE
-    <PostsContext.Provider value={{ posts, setPosts }}>
+    <PostsContext.Provider value={{ posts, setPosts }}> // BLOG RENDER ERROR: should pass "posts, setPosts" in double layer curly bracket to "value"
       <main className="main">
         ...
         <OtherComponents />
